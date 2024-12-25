@@ -50,23 +50,39 @@ python manage.py runserver
 1. 사용자 관련:
 
     - POST /api/accounts/: 회원가입
+    ![](readme_img/siginup.png)
 
     - POST /api/accounts/login/: 로그인
+    로그인 성공
+    ![](readme_img/login.png)
+    로그인 실패(아이디/비밀번호 틀림림)
+    ![](readme_img/login_failed.png)
 
     - GET /api/accounts/<str:username>: 프로필조회
-        
+    프로필 조회
+    ![](readme_img/profile.png)
+    프로필 조회 실패(로그인 안 됨)
+    ![](readme_img/profile_failed.png)
 
 2. 상품 관련:
 
     - POST /api/products/: 상품 등록
+    상품 등록
+    ![](readme_img/product_creation.png)
+    상품 등록 실패(로그인 안 됨)
+    ![](readme_img/product_creation_failed.png)
 
     - GET /api/products/: 상품 조회
-
-    - GET /api/products/<productId>: 상품 상세 조회
+    ![](readme_img/product_view.png)
 
     - PUT /api/products/<productId>: 상품 수정
+    상품 수정
+    ![](readme_img/product_put_success.png)
+    상품 수정 실패(게시글 작성자가 아님)
+    ![](readme_img/product_put_failed.png)
 
     - DELETE /api/products/<productId>: 상품 삭제
+    ![](readme_img/product_delete.png)
 
 ---
 ## 데이터베이스 모델링
@@ -75,7 +91,7 @@ python manage.py runserver
 - 상품 모델: 상품의 제목, 내용, 이미지, 가격 등의 정보를 저장하는 모델을 구현하였습니다.
 ---
 ## ERD
-![ERD](spartamarketdrf_diagram.jpg)
+![ERD](readme_img/spartamarketdrf_diagram.jpg)
 ---
 ## 프로젝트 구조
 ```
